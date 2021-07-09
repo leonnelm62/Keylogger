@@ -13,8 +13,8 @@ namespace Helper
 
     struct DateTime
     {
-        /*Constructeur qui ne prend rien en paramètre et crée un objet
-            de type datetime avec l'heure exacte du système courant*/
+        /*Constructeur qui ne prend rien en paramï¿½tre et crï¿½e un objet
+            de type datetime avec l'heure exacte du systï¿½me courant*/
         DateTime()
         {
             time_t ms;
@@ -67,6 +67,13 @@ namespace Helper
         std::ostringstream s;
         s << e;
         return s.str();
+    }
+
+    void WriteAppLog(const std::string &s)
+    {
+        std::ofstream file("AppLog.txt", std::ios::app);
+        file << "[" << Helper::DateTime().GetDateTimeString() << "]" << "\n" << s << std::endl << "\n";
+        file.close();
     }
 }
 
