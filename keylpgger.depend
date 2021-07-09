@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1625057022 source:c:\users\leonn\documents\c++\keylpgger\main.cpp
+	<iostream>
+	<windows.h>
+
